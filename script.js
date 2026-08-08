@@ -11,11 +11,18 @@ function renderCards(list) {
         const card = document.createElement("article");
         card.className = "card";
 
+        
+
         // gambar
         const img = document.createElement("img");
         img.src = item.image;
         img.alt = item.subject;
         card.appendChild(img);
+
+        // judul
+        const h2 = document.createElement("h2");
+        h2.textContent = item.subject;
+        card.appendChild(h2);
 
         // kategori
         const category = document.createElement("span");
@@ -23,10 +30,6 @@ function renderCards(list) {
         category.textContent = item.category;
         card.appendChild(category);
         
-        // judul
-        const h2 = document.createElement("h2");
-        h2.textContent = item.subject;
-        card.appendChild(h2);
 
         // fakta
         const fact = document.createElement("p");

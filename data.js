@@ -4,7 +4,7 @@ const facts = [
     subject: "Gurita",
     fact: "Punya tiga jantung dan darah berwarna biru karena mengandung hemosianin, bukan hemoglobin.",
     category: "biologi",
-    image: "https://picsum.photos/seed/gurita/400/300",
+    image: "https://images.unsplash.com/photo-1510637234398-d25c9570a0a0?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "Smithsonian Ocean"
   },
   {
@@ -12,7 +12,7 @@ const facts = [
     subject: "Hiu",
     fact: "Sudah ada sejak sekitar 450 juta tahun lalu, jauh sebelum pohon pertama muncul di daratan.",
     category: "biologi",
-    image: "https://picsum.photos/seed/hiu/400/300",
+    image: "https://images.unsplash.com/photo-1563186627-0d185db94083?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "American Museum of Natural History"
   },
   {

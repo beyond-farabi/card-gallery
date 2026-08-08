@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #faf9f6;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --border: #e0ddd6;
+    --accent: #3b6d11;
+    --gap: 24px;
+    --font-heading: "Fraunces", Georgia, serif;
+    --font-body: "Inter", system-ui, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    padding: var(--gap);
+}
+
+header {
+    max-width: 1200px;
+    margin: 0 auto var(--gap);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: var(--font-heading);
+}
+
+.gallery {
+    /* jadikan grid */
+    display: grid;
+    /* kolom responsif - repeat(auto-fill, minmax(...)) */
+    grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+    /* jarak antar kartu */
+    column-gap: var(--gap);
+    gap: var(--gap);
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.card img {
+    /* lebar penuh kartu */
+    width: 100%;
+    /* tinggi tetap 180px */
+    height: 180px;
+    /* object-fit */
+    object-fit: cover;
+
+    /* hilangkan celah kecil di bawah gambar */
+    display: block;
+}
+
+.card h2,
+.card p,
+.card .category,
+.card .source {
+    padding: 0 16px;
+}
+
+.card h2 {
+    font-family: var(--font-heading);
+}
