@@ -1,5 +1,13 @@
 const gallery = document.getElementById("gallery");
 
+const searchInput = document.getElementById("search");
+const filtersEl = document.getElementById("filters");
+
+// state kriteria
+let searchQuery = "";
+let activeCategory = "all";
+
+
 function renderCards(list) {
     // kosongkan wadah lebih dulu
     // kita ingin fungsi ini dipanggil ulang saat filter berubah tentu saja
@@ -44,9 +52,27 @@ function renderCards(list) {
 
         gallery.appendChild(card);
     });
-
-
-
 }
 
-renderCards(facts);
+function getFilteredFacts() {
+    // kembalikan array hasil saring dari `facts`
+    return facts.filter((item) => {
+        const cocokKategori =  activeCategory === "all" || item.category === activeCategory;
+        const cocokPencarian = item.subject.toLowerCase().includes(searchQuery) || item.fact.toLowerCase().includes(searchQuery);
+
+        return cocokKategori && cocokPencarian;
+    });
+}
+
+// satu pintu untuk gambar ulang
+function render() {
+    renderCards(getFilteredFacts());
+}
+
+// sekarang dengarkan ketikan pengguna
+searchInput.addEventListener("input", (event) => {
+    searchQuery = event.target.value.toLowerCase();
+    render();
+})
+
+render();
