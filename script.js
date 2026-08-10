@@ -64,6 +64,38 @@ function getFilteredFacts() {
     });
 }
 
+function renderFilters() {
+    const categories = ["all", ...new Set(facts.map((item) => item.category))]
+    filtersEl.innerHTML = "";
+
+    categories.forEach((cat) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.dataset.category = cat;
+        btn.textContent = cat === "all" ? "Semua" : cat;
+
+        if (cat === activeCategory) {
+            btn.className = "active";
+        }
+
+        filtersEl.appendChild(btn);
+    });
+}
+
+filtersEl.addEventListener("click", (event) => {
+    const btn = event.target.closest("button");
+    if (!btn) return;
+
+    // simpan btn.dataset.category ke activCategory
+    activeCategory = btn.dataset.category;
+
+    // panggil renderFilters() supaya class "active" pindah
+    renderFilters();
+
+    // panggil render
+    render();
+});
+
 // satu pintu untuk gambar ulang
 function render() {
     renderCards(getFilteredFacts());
@@ -75,4 +107,5 @@ searchInput.addEventListener("input", (event) => {
     render();
 })
 
+renderFilters();
 render();
