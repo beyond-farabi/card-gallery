@@ -7,6 +7,25 @@ const filtersEl = document.getElementById("filters");
 let searchQuery = "";
 let activeCategory = "all";
 
+// iniate buat rendering input
+let searchTimer;
+
+searchInput.addEventListener("input", (event) => {
+    const value = event.target.value;
+
+    // batalkan timer sebelumnya (kalau ada)
+    // clearTimeout(searchTimer)
+    // aman dipanggil meski searchTimer masih undefined - tidak error
+
+    clearTimeout(searchTimer);
+
+    // jadwalkan yang baru (pake setTimeout())
+    searchTimer = setTimeout(() => {
+        console.log("render dipanggil:", value);
+        searchQuery = value.toLowerCase();
+        render();
+    }, 300);
+});
 
 function renderCards(list) {
     // kosongkan wadah lebih dulu
