@@ -14,6 +14,19 @@ function renderCards(list) {
     // tanpa dikosongkan, kartu lama menumpuk dengan kartu baru.
     gallery.innerHTML = "";
 
+    // kalau list benar-benar kosong:
+    // - buat <p> dengan className "empty"
+    // - isi teks: "Tidak ada fakta yang cocok" (ini misal)
+    // - masukkan ke gallery
+    // - return
+    if (list.length === 0) {
+        const emptyState = document.createElement("p");
+        emptyState.className = "empty";
+        emptyState.textContent = "Tidak ada fakta yang cocok";
+        gallery.appendChild(emptyState);
+        return;
+    }
+
     // buat satu kartu untuk setiap item
     list.forEach((item) => {
         const card = document.createElement("article");
@@ -106,6 +119,8 @@ searchInput.addEventListener("input", (event) => {
     searchQuery = event.target.value.toLowerCase();
     render();
 })
+
+
 
 renderFilters();
 render();
