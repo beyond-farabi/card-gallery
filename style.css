@@ -27,6 +27,8 @@ body {
 header {
     max-width: 1200px;
     margin: 0 auto var(--gap);
+    font-size: 50px;
+    font-weight: 1000;
 }
 
 main {
@@ -81,18 +83,20 @@ h1 {
 .filters {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
+    gap: 6px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .filters button {
-    padding: 6px 14px;
+    padding: 4px 12px;
     font: inherit;
     color: var(--muted);
     background: transparent;
     border: 1px solid var(--border);
     border-radius: 3px;
     cursor: pointer;
+    font-size: 0.875rem;
 }
 
 .filters button.active {

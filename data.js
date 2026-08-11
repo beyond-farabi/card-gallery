@@ -20,7 +20,7 @@ const facts = [
     subject: "Tardigrada",
     fact: "Hewan mikroskopis ini bertahan hidup setelah dipaparkan langsung ke vakum ruang angkasa pada misi FOTON-M3.",
     category: "biologi",
-    image: "https://picsum.photos/seed/tardigrada/400/300",
+    image: "https://images.pexels.com/photos/8695763/pexels-photo-8695763.jpeg",
     source: "Current Biology (2008)"
   },
   {
@@ -28,7 +28,7 @@ const facts = [
     subject: "Venus",
     fact: "Satu hari di Venus lebih lama daripada satu tahunnya. Rotasinya 243 hari Bumi, orbitnya hanya 225 hari.",
     category: "astronomi",
-    image: "https://picsum.photos/seed/venus/400/300",
+    image: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "NASA"
   },
   {
@@ -36,7 +36,7 @@ const facts = [
     subject: "Bintang neutron",
     fact: "Materinya begitu padat sehingga satu sendok teh saja diperkirakan berbobot sekitar satu miliar ton.",
     category: "astronomi",
-    image: "https://picsum.photos/seed/neutron/400/300",
+    image: "https://plus.unsplash.com/premium_photo-1721946441813-b39c511e8f92?q=80&w=1109&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "NASA"
   },
   {
@@ -44,7 +44,7 @@ const facts = [
     subject: "Pohon dan bintang",
     fact: "Jumlah pohon di Bumi ditaksir sekitar 3 triliun, jauh lebih banyak daripada perkiraan bintang di galaksi Bima Sakti.",
     category: "astronomi",
-    image: "https://picsum.photos/seed/pohon/400/300",
+    image: "https://images.unsplash.com/photo-1514707363198-72452c95dd48?q=80&w=1239&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "Nature (2015)"
   },
   {
@@ -52,7 +52,7 @@ const facts = [
     subject: "Cleopatra",
     fact: "Hidup lebih dekat ke masa pendaratan manusia di Bulan daripada ke masa pembangunan Piramida Giza.",
     category: "sejarah",
-    image: "https://picsum.photos/seed/cleopatra/400/300",
+    image: "https://images.unsplash.com/photo-1614247262098-76459e80e152?q=80&w=1041&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "Smithsonian Magazine"
   },
   {
@@ -60,7 +60,7 @@ const facts = [
     subject: "Universitas Oxford",
     fact: "Sudah mengajar sejak sekitar tahun 1096, lebih tua daripada Kekaisaran Aztek yang berdiri pada 1325.",
     category: "sejarah",
-    image: "https://picsum.photos/seed/oxford/400/300",
+    image: "https://images.unsplash.com/20/cambridge.JPG?q=80&w=1147&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "University of Oxford"
   },
   {
@@ -68,7 +68,7 @@ const facts = [
     subject: "Perang Inggris-Zanzibar",
     fact: "Perang terpendek dalam catatan sejarah, berlangsung sekitar 38 menit pada 27 Agustus 1896.",
     category: "sejarah",
-    image: "https://picsum.photos/seed/zanzibar/400/300",
+    image: "https://pixabay.com/images/download/stefanparnarov-retro-soldiers-7989583_1920.jpg",
     source: "Royal Museums Greenwich"
   },
   {
@@ -76,7 +76,7 @@ const facts = [
     subject: "Petir",
     fact: "Memanaskan udara di sekitarnya hingga sekitar 30.000 derajat Celsius, sekitar lima kali lebih panas dari permukaan Matahari.",
     category: "fisika",
-    image: "https://picsum.photos/seed/petir/400/300",
+    image: "https://images.unsplash.com/photo-1749476244079-ec5d127a6de1?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "National Weather Service"
   },
   {
@@ -84,7 +84,7 @@ const facts = [
     subject: "Menara Eiffel",
     fact: "Bisa bertambah tinggi sekitar 15 sentimeter saat musim panas karena pemuaian termal pada rangka besinya.",
     category: "fisika",
-    image: "https://picsum.photos/seed/eiffel/400/300",
+    image: "https://images.unsplash.com/photo-1565881606991-789a8dff9dbb?q=80&w=1065&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "Société d'Exploitation de la Tour Eiffel"
   },
   {
@@ -92,7 +92,7 @@ const facts = [
     subject: "Awan kumulus",
     fact: "Meski tampak ringan, satu awan kumulus berukuran sedang bisa mengandung air seberat ratusan ton.",
     category: "fisika",
-    image: "https://picsum.photos/seed/awan/400/300",
+    image: "https://images.unsplash.com/photo-1663774718003-14c125ac0d1a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3VtdWx1cyUyMGNsb3VkfGVufDB8fDB8fHww",
     source: "USGS Water Science School"
   },
   {
@@ -100,7 +100,7 @@ const facts = [
     subject: "Challenger Deep",
     fact: "Titik terdalam samudra yang diketahui, berada sekitar 10.935 meter di bawah permukaan laut di Palung Mariana.",
     category: "geografi",
-    image: "https://picsum.photos/seed/mariana/400/300",
+    image: "https://images.pexels.com/photos/37126191/pexels-photo-37126191.jpeg",
     source: "NOAA"
   },
   {
@@ -108,7 +108,7 @@ const facts = [
     subject: "Antartika",
     fact: "Merupakan gurun terbesar di dunia. Definisi gurun didasarkan pada curah hujan rendah, bukan suhu panas.",
     category: "geografi",
-    image: "https://picsum.photos/seed/antartika/400/300",
+    image: "https://plus.unsplash.com/premium_photo-1723040527350-3baeab1954bf?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "British Antarctic Survey"
   },
   {
@@ -116,7 +116,7 @@ const facts = [
     subject: "Rusia",
     fact: "Wilayahnya membentang melintasi 11 zona waktu, terluas di antara semua negara di dunia.",
     category: "geografi",
-    image: "https://picsum.photos/seed/rusia/400/300",
+    image: "https://images.unsplash.com/photo-1554844344-c34ea04258c4?q=80&w=1227&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     source: "CIA World Factbook"
   }
 ];
