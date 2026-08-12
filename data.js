@@ -68,7 +68,7 @@ const facts = [
     subject: "Perang Inggris-Zanzibar",
     fact: "Perang terpendek dalam catatan sejarah, berlangsung sekitar 38 menit pada 27 Agustus 1896.",
     category: "sejarah",
-    image: "https://pixabay.com/images/download/stefanparnarov-retro-soldiers-7989583_1920.jpg",
+    image: "https://www.historytoday.com/sites/default/files/articles/Zanzibar.jpg",
     source: "Royal Museums Greenwich"
   },
   {

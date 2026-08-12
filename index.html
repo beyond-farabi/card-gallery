@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>Fact Gallery</header>
+    <header><h1>Fact Gallery</h1></header>
 
     <div class="controls">
         <input type="search" id="search" placeholder="Cari fakta..." aria-label="Cari fakta">
@@ -34,7 +34,13 @@
         <div class="gallery" id="gallery"></div>
     </main>
 
+    <dialog id="modal">
+        <button type="button" class="modal-close" aria-label="Tutup">&times;</button>
+        <div id="modal-content"></div>
+    </dialog>
+
     <script src="data.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
