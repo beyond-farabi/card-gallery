@@ -10,6 +10,48 @@ let activeCategory = "all";
 // iniate buat rendering input
 let searchTimer;
 
+const modal = document.getElementById("modal");
+const modalContent = document.getElementById("modal-content");
+
+function openModal(item) {
+    modalContent.innerHTML = "";
+
+    const img = document.createElement("img");
+    img.src = item.image;
+    img.alt = item.subject;
+    modalContent.appendChild(img);
+
+    // tambahkan h2 (item.subject), p (item.fact), small (sumber), polanya persis sama dengan renderCards.
+    const heading = document.createElement("h2");
+    heading.textContent = item.subject;
+    modalContent.appendChild(heading);
+
+    const parag = document.createElement("p");
+    parag.textContent = item.fact;
+    modalContent.appendChild(parag);
+
+    const src = document.createElement("small");
+    src.textContent = "Sumber: " + item.source;
+
+    modalContent.appendChild(src);
+
+    modal.showModal();
+}
+
+gallery.addEventListener("click", (event) => {
+    const card = event.target.closest(".card");
+    if (!card) return;
+
+    // cari objek datanya dari card.dataset.id
+    const item = facts.find((f) => f.id === Number(card.dataset.id));
+    if (!item) return;
+    openModal(item);
+});
+
+modal.querySelector(".modal-close").addEventListener("click", () => {
+    modal.close();
+})
+
 searchInput.addEventListener("input", (event) => {
     const value = event.target.value;
 
@@ -21,7 +63,7 @@ searchInput.addEventListener("input", (event) => {
 
     // jadwalkan yang baru (pake setTimeout())
     searchTimer = setTimeout(() => {
-        console.log("render dipanggil:", value);
+        // console.log("render dipanggil:", value);
         searchQuery = value.toLowerCase();
         render();
     }, 300);
@@ -50,8 +92,7 @@ function renderCards(list) {
     list.forEach((item) => {
         const card = document.createElement("article");
         card.className = "card";
-
-        
+        card.dataset.id = item.id;
 
         // gambar
         const img = document.createElement("img");
@@ -133,11 +174,11 @@ function render() {
     renderCards(getFilteredFacts());
 }
 
-// sekarang dengarkan ketikan pengguna
-searchInput.addEventListener("input", (event) => {
-    searchQuery = event.target.value.toLowerCase();
-    render();
-})
+// // sekarang dengarkan ketikan pengguna
+// searchInput.addEventListener("input", (event) => {
+//     searchQuery = event.target.value.toLowerCase();
+//     render();
+// })
 
 
 
