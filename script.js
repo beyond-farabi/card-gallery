@@ -13,6 +13,8 @@ let searchTimer;
 const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modal-content");
 
+let facts = [];
+
 function openModal(item) {
     modalContent.innerHTML = "";
 
@@ -180,7 +182,43 @@ function render() {
 //     render();
 // })
 
+function renderLoading() {
+    gallery.innerHTML = "";
+    const msg = document.createElement("p");
+    msg.className = "empty";
+    msg.textContent = "Memuat fakta...";
+    gallery.appendChild(msg);
+}
 
+async function loadFacts() {
 
-renderFilters();
-render();
+    // panggil renderLoading sebelum fetch dimulai
+    renderLoading();
+
+    try {
+        // fetch("data.json")
+        const response = await fetch("data.json");
+
+        // guard clause  kalau response.ok bernilai false, lempar error
+        // throw new Error("Gagal memat data");
+        if (!response.ok) {
+            throw new Error("Gagal memuat data");
+        }
+
+        // ubah response jadi objek Javascript, simpan ke facts
+        facts = await response.json();
+
+        renderFilters();
+        render();
+    } catch (error) {
+
+        console.log("Gagal memua data.json", error);
+        gallery.innerHTML = "";
+        const msg = document.createElement("p");
+        msg.className = "empty";
+        msg.textContent = "Gagal memuat data. Coba muat ulang halaman.";
+        gallery.appendChild(msg);
+    }
+}
+
+loadFacts();
